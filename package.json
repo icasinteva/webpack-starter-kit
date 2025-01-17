@@ -22,8 +22,8 @@
     "webpack-dev-server": "^4.15.1"
   },
   "scripts": {
-    "start": "webpack serve",
-    "build": "webpack",
+    "start": "webpack-dev-server --open",
+    "build": "webpack --mode development",
     "test": "mochapack 'test/**/*.js'",
     "lint": "./node_modules/.bin/eslint 'src/**.js' 'test/**.js'"
   }
