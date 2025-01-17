@@ -5,8 +5,9 @@
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/turingschool-examples/webpack-starter-kit.git"
+    "url": "git+https://github.com/icasinteva/webpack-starter-kit.git"
   },
+  "homepage": "https://icasinteva.github.io/webpack-starter-kit.git",
   "author": "Turing School of Software and Design",
   "license": "MIT",
   "devDependencies": {
@@ -14,6 +15,7 @@
     "css-loader": "^5.2.6",
     "eslint": "^7.27.0",
     "file-loader": "^6.2.0",
+    "gh-pages": "^6.3.0",
     "mocha": "^10.2.0",
     "mochapack": "^2.1.2",
     "style-loader": "^3.3.4",
@@ -24,6 +26,8 @@
   "scripts": {
     "start": "webpack-dev-server --open",
     "build": "webpack --mode development",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "test": "mochapack 'test/**/*.js'",
     "lint": "./node_modules/.bin/eslint 'src/**.js' 'test/**.js'"
   }
